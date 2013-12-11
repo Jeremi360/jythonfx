@@ -19,11 +19,8 @@ class FXMLLoader(AnchorPane):
                     setattr(self, prefix + c.getId(), c)
                     print "self." + prefix + c.getId()
 
-                try:
-                    if c.getChildren() != []:
+                if c.getChildren() != []:
                     self.setIds(c, c.getId() + "_")
-                except:
-                    pass
 
             except:
                     pass
