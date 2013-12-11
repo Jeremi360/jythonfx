@@ -18,12 +18,13 @@ class FXMLLoader(AnchorPane):
                 if c.getId != ("" or None):
                     setattr(self, prefix + c.getId(), c)
                     print "self." + prefix + c.getId()
-            except:
-                pass
 
-            try:
-                if c.getChildren() != []:
-                    self.setIds(c, c.getId() + "_")
+                try:
+                    if c.getChildren() != []:
+                        self.setIds(c, c.getId() + "_")
+                except:
+                    pass
+
             except:
                 pass
 
