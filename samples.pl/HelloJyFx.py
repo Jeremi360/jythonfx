@@ -1,21 +1,14 @@
 # -*- coding: utf-8 *-*
-#powyższa linjka włącza polskie kodowanie w python
-# Copyright (C) 2012 Jeremi Bieracki <jeremi360@gmail.com>
-# bazuje na: http://www.javamexico.org/blogs/jose_manuel/iniciando_con_javafx_jython_javafx
 
-# "*" znaczy, że jest zaimportowane wszystko z danej biblioteki
-from javafx.application import Application
+import os
+import sys
+sys.path.append(os.path(".."))
+
+from jythonfx.application import Application
 from javafx.scene import *
-from javafx.event import EventHandler
-
-'''# komentarz wielo liniowy
-w Jython/Python zamiast klamerek jako pocztków i końców bloków kodu używa
-się wcieć - jedo wcięcie to 4 spacje - Eclipse i większość Edytorów
-wspierających Pythona zamiena automatycznie tabulację na 4 spacje
-'''
+from jythonfx.event import EventHandler
 
 class HiJavaFX(Application):
-# deklaracja klasy aplikacji -dziedziczy i implementuje Application i EventHandler
 
     def start(self, stage):
         '''start - właściwa część programu
@@ -27,7 +20,9 @@ class HiJavaFX(Application):
 
         label = "Kliknij" #brak słowa kluczowego self - zmienna dostępna tylko w tym fragmencie kodu
         button = control.Button(label) #tworzymy przycisk - scene.control
-        button.setOnAction(OnButtonClicked()) #ustawiamy akcję przycisku
+        
+        onbc = EventHandler(self.OnButtonClicked)#wetn spsób pokazjuemy iż metoda służy od obsługi zdarzeń
+        button.setOnAction(onbc) #ustawiamy akcję przycisku
 
         self.pane = layout.StackPane() #tworzymy układ - scene.layout
         self.pane.getChildren().add(button)#oddajemy przycisk do układu
@@ -42,16 +37,15 @@ class HiJavaFX(Application):
 
         stage.show()#wyświetlamy okno
 
-class OnButtonClicked(EventHandler):
-    #handle - obsługa zdarzeń dzięki implementacji EventHandler
-    def handle(self, event):
+    def OnButtonClicked(self, event):
+        #obsługa zdarzenia będącego kilknienciem na przycisku
         '''argument event aby móc skorzytać z danych
             o ustawionym do obsługi wydarzeniu np.:
             xy kursora myszy, przycisk na klawiaturze'''
 
         message = "Witaj świecie w JythonFX"
-        print message #wyświatlamy napis
+        print message #wyświatlamy napis w konsoli
 
 if __name__ == "__main__":#uruchamia aplikacje
-    Application.launch(HiJavaFX().getClass(), [])
+    Application.launch(HiJavaFX)
     
