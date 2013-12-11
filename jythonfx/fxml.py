@@ -14,10 +14,16 @@ class FXMLLoader(AnchorPane):
 
     def setIds(self, children, prefix = ""):
         for c in children.getChildren():
-            setattr(self, prefix + c.getId(), c)
-            print "self." + prefix + c.getId()
+            try:
+                setattr(self, prefix + c.getId(), c)
+                print "self." + prefix + c.getId()
 
-            if c.getChildren() != []:
-                self.setIds(c, c.getId() + "_")
+                try:
+                    if c.getChildren() != []:
+                        self.setIds(c, c.getId() + "_")
+                except:
+                    pass
 
+            except:
+                    pass
 
