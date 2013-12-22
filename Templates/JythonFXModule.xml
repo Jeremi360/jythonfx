@@ -3,8 +3,8 @@ Created on ${date}
 
 @author: ${user}
 '''
-import jythonfx
-jythonfx.getJavaFX()
+from jythonfx import fix
+fix.getJavaFX()
 
 ${cursor}
 
