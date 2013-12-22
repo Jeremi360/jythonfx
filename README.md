@@ -1,5 +1,8 @@
 JythonFX
 ========
+**PL:**
+Info na temat instalacji i tutorial po polsku zajdziecie [tu](http://retrofunhd.esy.es/?p=56)
+**ENG:**
 
 Simple tricks to make easy to develop apps using Jython + JavaFX.
 
@@ -22,3 +25,4 @@ Simple tricks to make easy to develop apps using Jython + JavaFX.
 1. In Eclipse IDE open **Window -> Preferences -> PyDev -> Editor -> Templates**
 
 1. Click on **Import**, browse to *JythonFX/Templates* choose template
+

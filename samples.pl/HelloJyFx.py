@@ -3,8 +3,8 @@
 import sys
 import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
-import jythonfx
-jythonfx.getJavaFX()
+from jythonfx import fix
+fix.getJavaFX()
 from jythonfx.application import Application
 from javafx.scene import *
 from jythonfx.event import EventHandler
@@ -44,7 +44,7 @@ class HiJavaFX(Application):
             o ustawionym do obsługi wydarzeniu np.:
             xy kursora myszy, przycisk na klawiaturze'''
 
-        message = "Witaj świecie w JythonFX"
+        message = unicode("Witaj świecie w JythonFX")
         print message #wyświatlamy napis w konsoli
 
 if __name__ == "__main__":#uruchamia aplikacje
