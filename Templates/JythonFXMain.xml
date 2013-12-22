@@ -7,7 +7,7 @@ Created on ${date}
 import jythonfx
 jythonfx.getJavaFX()
 from jythonfx.application import Application
-from javafx.scene import Scene
+from javafx.scene import *
 
 class ${MyClass}(Application):
 
