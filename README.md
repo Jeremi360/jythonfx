@@ -17,5 +17,3 @@ How install:
 	3. To install Templates:
 		1. In Eclipse IDE open **Window -> Preferences -> PyDev -> Editor -> Templates
 		2. Click on **Import**, browse to *JythonFX/Templates* choose template
-
-		sfvs
