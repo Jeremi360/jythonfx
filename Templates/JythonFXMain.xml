@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="false" context="org.python.pydev.editor.templates.python.modules" deleted="false" description="Module: JythonFX App Main" enabled="true" id="org.python.pydev.editor.templates.python.module.jythonfxappm" name="Module: JythonFX App Main">'''
+Created on ${date}
+
+@author: ${user}
+'''
+
+import jythonfx
+jythonfx.getJavaFX()
+from jythonfx.application import Application
+from javafx.scene import Scene
+
+class ${MyClass}(Application):
+
+    def start(self, stage):
+        ${cursor}
+        self.title = "${MyClass}"
+        self.pane = layout.AnchorPane()
+
+        self.width = 300
+        self.height = 250
+
+        stage.setTitle(self.title)
+
+        stage.setScene(Scene(self.pane, self.width, self.height))
+
+        stage.show()
+
+if __name__ == "__main__":
+    Application.launch(${MyClass})
+
+</template></templates>

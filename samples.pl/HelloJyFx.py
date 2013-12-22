@@ -3,7 +3,8 @@
 import sys
 import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
-
+import jythonfx
+jythonfx.getJavaFX()
 from jythonfx.application import Application
 from javafx.scene import *
 from jythonfx.event import EventHandler
@@ -20,7 +21,7 @@ class HiJavaFX(Application):
 
         label = "Kliknij" #brak słowa kluczowego self - zmienna dostępna tylko w tym fragmencie kodu
         button = control.Button(label) #tworzymy przycisk - scene.control
-        
+
         onbc = EventHandler(self.OnButtonClicked)#wetn spsób pokazjuemy iż metoda służy od obsługi zdarzeń
         button.setOnAction(onbc) #ustawiamy akcję przycisku
 
@@ -48,4 +49,4 @@ class HiJavaFX(Application):
 
 if __name__ == "__main__":#uruchamia aplikacje
     Application.launch(HiJavaFX)
-    
+
