@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="false" context="org.python.pydev.editor.templates.python.modules" deleted="false" description="Module: JythonFX" enabled="true" id="org.python.pydev.editor.templates.python.module.jythonfx" name="Module: JythonFX">'''
+Created on ${date}
+
+@author: ${user}
+'''
+from jythonfx import fix
+fix.getJavaFX()
+
+${cursor}
+
+</template></templates>
