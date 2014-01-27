@@ -12,39 +12,36 @@ from jythonfx.event import EventHandler as EH
 class HiJavaFX(Application):
 
     def start(self, stage):
-        '''start - właściwa część programu
-        argument stage - potrzebna by móc zmienniać właściwości okna applikacji
+        '''start - mine method of App
+        arg stage - needed to change App's window
         '''
 
-        self.title = "JythonFX" #deklaracja zmiennej typu string/char (łańcuch znaków lub pojedynczy znak)
-        #słowo kluczowe self pozwoli odwołać się do tej zmiennej z z innych metod klasy i na wywołanie ich w innej części kodu
+        self.title = "JythonFX"
 
-        label = "Kliknij" #brak słowa kluczowego self - zmienna dostępna tylko w tym fragmencie kodu
-        button = control.Button(label) #tworzymy przycisk - scene.control
-        button.setOnAction(EH(self.OnButtonClicked)) #ustawiamy akcję przycisku
+        label = "Click Me!"
+        button = control.Button(label) #crate button
+        button.setOnAction(EH(self.OnButtonClicked)) #set button event on click
 
-        self.pane = layout.StackPane() #tworzymy układ - scene.layout
-        self.pane.getChildren().add(button)#oddajemy przycisk do układu
+        self.pane = layout.StackPane() #create layout of scene
+        self.pane.getChildren().add(button)#add button to scene
 
-        self.width = 300 #deklaracja zmiennej będącej liczbą
+        self.width = 300
         self.height = 250
 
-        stage.setTitle(self.title) #nadajemy tutuł oknu(stage)
+        stage.setTitle(self.title) #set caption for App's window
 
         stage.setScene(Scene(self.pane, self.width, self.height))
-        #ustawiamy pane jako układ i rozmiar sceny/okna
+        #set self.pane as App's layout with self.width as App's width and self.height as App's height
 
-        stage.show()#wyświetlamy okno
+        stage.show()#show App
 
     def OnButtonClicked(self, event):
-        #obsługa zdarzenia będącego kilknienciem na przycisku
-        '''argument event aby móc skorzytać z danych
-            o ustawionym do obsługi wydarzeniu np.:
-            xy kursora myszy, przycisk na klawiaturze'''
+        #handle event for cliked button
+        #arg event - needed to get event data
 
-        message = unicode("Witaj świecie w JythonFX")
-        print message #wyświatlamy napis w konsoli
+        message = unicode("Hello World w JythonFX")#unicode to fix non English chars
+        print message #display massage in console
 
-if __name__ == "__main__":#uruchamia aplikacje
+if __name__ == "__main__": #run app
     Application.launch(HiJavaFX)
 

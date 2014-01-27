@@ -7,7 +7,7 @@ Info na temat instalacji i tutorial po polsku zajdziecie [tu](http://retrofunhd.
 Simple tricks to make easy to develop apps using Jython + JavaFX.
 
 **files included:**
-- **samples.pl** - samples with polish commentary
+- **samples** - samples with commentary
 - **Templates** - file temples for Eclipse IDE
 
 **required:**
