@@ -2,7 +2,7 @@
 import fix
 fix.getJavaFX()
 from javafx.fxml import FXMLLoader as FxmlL
-from java.lang import File
+from java.io import File
 
 class FXMLLoader(object):
     def __init__(self, fxmlfile):
