@@ -8,6 +8,7 @@ class FXMLLoader(object):
         print fxmlfile
         fxml = FxmlL(self.getClass().getResource(fxmlfile))
         fxml.setController(self)
+        self.fxml = fxml
 
         self.body = fxml.load()
         self.getChildren().add(self.body)
