@@ -2,11 +2,12 @@
 import fix
 fix.getJavaFX()
 from javafx.fxml import FXMLLoader as FxmlL
-
+from java.io.lang import String
 
 class FXMLLoader(object):
     def __init__(self, fxmlfile):
-        fxml = FxmlL(self.getClass().getResource(fxmlfile))
+        print fxmlfile
+        fxml = FxmlL(self.getClass().getResource(String(fxmlfile)))
         fxml.setController(self)
 
         self.body = fxml.load()
