@@ -1,6 +1,10 @@
 # -*- coding: utf-8 *-*
 #TODO: license & copyrights
-
+import sys
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+from jythonfx import fix
+fix.getJavaFX()
 from jythonfx.application import Application
 from javafx.scene import Scene
 from jythonfx.event import EventHandler as EH
