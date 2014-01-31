@@ -12,7 +12,8 @@ from jythonfx.event import EventHandler as EH
 class HiJavaFX(Application):
 
     def start(self, stage):
-        '''start - mine method of App
+        '''
+        start - mine method of App
         arg stage - needed to change App's window
         '''
 
@@ -36,7 +37,7 @@ class HiJavaFX(Application):
         stage.show()#show App
 
     def OnButtonClicked(self, event):
-        #handle event for cliked button
+        #handle event for clicked button
         #arg event - needed to get event data
 
         message = unicode("Hello World w JythonFX")#unicode to fix non English chars
