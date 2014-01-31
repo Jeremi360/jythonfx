@@ -7,7 +7,7 @@ from java.lang import String
 class FXMLLoader(object):
     def __init__(self, fxmlfile):
         print fxmlfile
-        fxml = FxmlL(self.getClass().getResource(String(fxmlfile)))
+        fxml = FxmlL(self.getClass().getResource(fxmlfile))
         fxml.setController(self)
 
         self.body = fxml.load()
