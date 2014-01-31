@@ -2,13 +2,14 @@
 import fix
 fix.getJavaFX()
 from javafx.fxml import FXMLLoader as FxmlL
+from java.lang import File
 
 class FXMLLoader(object):
     def __init__(self, fxmlfile):
         print fxmlfile
         fxml = FxmlL(self.getClass().getResource(fxmlfile))
         fxml.setController(self)
-        self.fxml = fxml
+        fxml.setLocation(fxmlfile)
 
         self.body = fxml.load()
         self.getChildren().add(self.body)
