@@ -18,7 +18,7 @@
         <Font name="System Italic" size="13.0" />
       </font>
     </Text>
-    <Button layoutX="181.0" layoutY="228.0" mnemonicParsing="false" prefHeight="103.0" prefWidth="238.0" text="Click me!">
+    <Button fx:id="Button" layoutX="181.0" layoutY="228.0" mnemonicParsing="false" prefHeight="103.0" prefWidth="238.0" text="Click me!">
       <font>
         <Font size="30.0" />
       </font>
