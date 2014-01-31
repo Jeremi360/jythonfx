@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Text fill="#41cc00" layoutX="271.0" layoutY="88.0" scaleX="8.500155061020205" scaleY="5.9561177816799376" strokeType="OUTSIDE" strokeWidth="0.0" text="JythonFX">
+      <effect>
+        <DropShadow height="11.0" radius="5.0" width="11.0" />
+      </effect>
+      <font>
+        <Font name="System Italic" size="13.0" />
+      </font>
+    </Text>
+    <Button layoutX="181.0" layoutY="228.0" mnemonicParsing="false" prefHeight="103.0" prefWidth="238.0" text="Click me!">
+      <font>
+        <Font size="30.0" />
+      </font>
+    </Button>
+  </children>
+</AnchorPane>
