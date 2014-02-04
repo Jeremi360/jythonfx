@@ -2,17 +2,15 @@
 import fix
 fix.getJavaFX()
 from javafx.fxml import FXMLLoader as FxmlL
-from java.net import URL
+from java.oi import File
 
 
 class FXMLLoader(object):
     def __init__(self, fxmlfile):
         print fxmlfile
-        root = "file:///"
-        uroot = URL(root)
-        fxml = FxmlL(URL(root + fxmlfile))
+        fxml = FxmlL(File(fxmlfile).toURL())
         fxml.setController(self)
-        fxml.setLocation(uroot)
+        #fxml.setLocation(uroot)
 
         self.body = fxml.load()
         self.getChildren().add(self.body)
