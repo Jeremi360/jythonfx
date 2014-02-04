@@ -15,10 +15,11 @@ from javafx.scene.layout import AnchorPane
 class Layout(FXMLLoader, AnchorPane):
     def __init__(self):
         super(Layout, self).__init__("FXMLSample.fxml")
-
+        self.Button.setOnMouseClicked(EH(self.OnClick))
 
     def OnClick(self, event):
-        print "Hello in FXML World!"
+        self.Text.setText("Hello FXML!")
+
 
 class Sample(Application):
     def __init__(self):
