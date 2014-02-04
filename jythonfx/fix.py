@@ -39,9 +39,10 @@ def checkJavaVer():
     if ver[0] <= 1.6:
         mess()
 
-    else:
+    elif ver[0] == 1.7:
         if ver[1] <= 0.11:
             mess()
+
 
 def getJavaFX():
     checkJavaVer()
