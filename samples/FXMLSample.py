@@ -15,7 +15,7 @@ from javafx.scene.layout import AnchorPane
 class Layout(FXMLLoader, AnchorPane):#second class must, be the same as root in FXML file
     def __init__(self):
         super(Layout, self).__init__("FXMLSample.fxml")#FXML file to load
-        self.Button.setOnMouseClicked(EH(self.OnClick))
+        self.Button.setOnMouseClicked(EH(self.OnClick))#The name of Widget must be the same as his id in FXML File
         self.clicked = False
         self.firstText = self.Text.getText()
         self.TextScaleX = self.Text.getScaleX()
