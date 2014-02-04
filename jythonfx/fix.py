@@ -34,6 +34,8 @@ def checkJavaVer():
 
         sys.exit()
 
+    print  ver
+
     if ver[0] <= 1.6:
         mess()
 
