@@ -10,7 +10,6 @@ class FXMLLoader(object):
         print fxmlfile
         fxml = FxmlL(File(fxmlfile).toURL())
         fxml.setController(self)
-        #fxml.setLocation(uroot)
 
         self.body = fxml.load()
         self.getChildren().add(self.body)
