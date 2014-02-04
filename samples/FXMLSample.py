@@ -13,7 +13,7 @@ from javafx.scene.layout import AnchorPane
 
 class Layout(FXMLLoader, AnchorPane):
     def __init__(self):
-        super(Layout, self).__init__("/FXMLSample.fxml")
+        super(Layout, self).__init__("file:///FXMLSample.fxml")
 
 
     def OnClick(self, event):
