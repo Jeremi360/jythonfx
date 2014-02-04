@@ -9,10 +9,11 @@ class FXMLLoader(object):
     def __init__(self, fxmlfile):
         print fxmlfile
         root = "file:///"
+        uroot = URL(root)
         fxmlfile = root + fxmlfile
         fxml = FxmlL(URL(fxmlfile))
         fxml.setController(self)
-        fxml.setLocation(root)
+        fxml.setLocation(uroot)
 
         self.body = fxml.load()
         self.getChildren().add(self.body)
