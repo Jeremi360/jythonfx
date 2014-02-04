@@ -16,11 +16,20 @@ class Layout(FXMLLoader, AnchorPane):
     def __init__(self):
         super(Layout, self).__init__("FXMLSample.fxml")
         self.Button.setOnMouseClicked(EH(self.OnClick))
+        self.clicked = False
+        self.firstText = self.Text.getText()
+        self.TextScale = self.TextScale.getScaleX()
 
     def OnClick(self, event):
-        self.Text.setScaleX(2)
-        self.Text.setScaleY(2)
-        self.Text.setText("Hello FXML!")
+        if not self.clicked:
+            self.Text.setScaleX(self.TextScale/2)
+            self.Text.setScaleY(self.TextScale/2)
+            self.Text.setText("Hello FXML!")
+        else:
+            self.Text.setScaleX(self.TextScale)
+            self.Text.setScaleY(self.TextScale)
+            self.Text.setText(self.firstText)
+
 
 
 
