@@ -16,9 +16,9 @@ def checkJavaVer():
     ver.pop(1)
 
     def mess():
-        mess = unicode("""Too old java version pleas upgrade to  7u11 or higher. \n
-                Zbyt stara wersja Java proszę zaktualizować do 7u11 lub wyższej.""")
-        jop.showMessageDialog(None, mess)
+        message = unicode("Too old java version pleas upgrade to  7u11 or higher.\n" +
+                       "Zbyt stara wersja Java proszę zaktualizować do 7u11 lub wyższej.")
+        jop.showMessageDialog(None, message)
 
         try:
             if platform.dist() == ('debian', 'wheezy/sid', ''):#for ubuntu
@@ -42,6 +42,12 @@ def checkJavaVer():
     elif ver[0] == 1.7:
         if ver[1] <= 0.11:
             mess()
+
+    elif ver[0] >= 1.8:
+        message = unicode("To wersja beta - mogą występować błędy.\n" +
+                       "This is beta version - may be have some bugs.")
+
+        jop.showMessageDialog(None, message)
 
 
 def getJavaFX():
