@@ -26,10 +26,12 @@ class Layout(FXMLLoader, AnchorPane):#second class must, be the same as root in 
             self.Text.setScaleX(self.TextScaleX/2)
             self.Text.setScaleY(self.TextScaleY/2)
             self.Text.setText("Hello FXML!")
+            self.clicked = True
         else:
             self.Text.setScaleX(self.TextScaleX)
             self.Text.setScaleY(self.TextScaleY)
             self.Text.setText(self.firstText)
+            self.clicked = False
 
 
 class Sample(Application):
