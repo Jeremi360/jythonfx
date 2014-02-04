@@ -18,9 +18,10 @@ class Layout(FXMLLoader, AnchorPane):
         self.Button.setOnMouseClicked(EH(self.OnClick))
 
     def OnClick(self, event):
+        self.Text.setScaleX(2)
+        self.Text.setScaleY(2)
         self.Text.setText("Hello FXML!")
-        self.Text.setScaleX(1)
-        self.Text.setScaleY(1)
+
 
 
 
