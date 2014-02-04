@@ -12,9 +12,9 @@ from jythonfx.fxml import FXMLLoader
 from javafx.scene.layout import AnchorPane
 
 
-class Layout(FXMLLoader, AnchorPane):
+class Layout(FXMLLoader, AnchorPane):#second class must, be the same as root in FXML file
     def __init__(self):
-        super(Layout, self).__init__("FXMLSample.fxml")
+        super(Layout, self).__init__("FXMLSample.fxml")#FXML file to load
         self.Button.setOnMouseClicked(EH(self.OnClick))
         self.clicked = False
         self.firstText = self.Text.getText()
@@ -29,9 +29,6 @@ class Layout(FXMLLoader, AnchorPane):
             self.Text.setScaleX(self.TextScale)
             self.Text.setScaleY(self.TextScale)
             self.Text.setText(self.firstText)
-
-
-
 
 
 class Sample(Application):
