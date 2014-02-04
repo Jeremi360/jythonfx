@@ -6,9 +6,11 @@ from javafx.fxml import FXMLLoader as FxmlL
 class FXMLLoader(object):
     def __init__(self, fxmlfile):
         print fxmlfile
-        fxml = FxmlL(self.getClass().getResource(fxmlfile))
+        #fxml = FxmlL(self.getClass().getResource(fxmlfile))
+        #fxml = FxmlL(self.getClass().getResource(fxmlfile))
+        fxml = FxmlL(fxmlfile)
         fxml.setController(self)
-        fxml.setLocation("/")
+        fxml.setLocation(".")
 
         self.body = fxml.load()
         self.getChildren().add(self.body)
