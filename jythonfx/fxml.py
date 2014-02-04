@@ -8,12 +8,11 @@ from java.net import URL
 class FXMLLoader(object):
     def __init__(self, fxmlfile):
         print fxmlfile
-        root = ""#"file:///"
+        root = "file:///"
         uroot = URL(root)
-        fxmlfile = root + fxmlfile
-        fxml = FxmlL(URL(fxmlfile))
+        fxml = FxmlL(URL(root + fxmlfile))
         fxml.setController(self)
-        #fxml.setLocation(uroot)
+        fxml.setLocation(uroot)
 
         self.body = fxml.load()
         self.getChildren().add(self.body)
