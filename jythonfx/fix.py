@@ -27,7 +27,7 @@ def checkJavaVer():
             else:
                 getjava = "http://www.java.com"
 
-            desk.getDesktop().browse(url(getjava).toURI());
+            desk.getDesktop().browse(url(getjava).toURI())
 
         except:
             pass
@@ -36,6 +36,7 @@ def checkJavaVer():
 
     if ver[0] <= 1.6:
         mess()
+
     else:
         if ver[1] <= 0.11:
             mess()
@@ -43,7 +44,9 @@ def checkJavaVer():
 def getJavaFX():
     checkJavaVer()
     home = jsys.getProperty("java.home")
+
     try:
         sys.path.insert(0, os.path.join(home, "lib", "jfxrt.jar"))
+
     except:
         pass
