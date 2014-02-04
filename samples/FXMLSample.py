@@ -18,7 +18,7 @@ class Layout(FXMLLoader, AnchorPane):#second class must, be the same as root in 
         self.Button.setOnMouseClicked(EH(self.OnClick))
         self.clicked = False
         self.firstText = self.Text.getText()
-        self.TextScale = self.TextScale.getScaleX()
+        self.TextScale = self.Text.getScaleX()
 
     def OnClick(self, event):
         if not self.clicked:
