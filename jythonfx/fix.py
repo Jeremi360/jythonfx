@@ -16,8 +16,8 @@ def checkJavaVer():
     ver.pop(1)
 
     def mess():
-        mess = unicode("""Too old java version pleas upgrade to  7u11 or higher \n
-                Zbyt stara wersja Java proszę zaktualizować do 7u11 lub wyższej""")
+        mess = unicode("""Too old java version pleas upgrade to  7u11 or higher. \n
+                Zbyt stara wersja Java proszę zaktualizować do 7u11 lub wyższej.""")
         jop.showMessageDialog(None, mess)
 
         try:
