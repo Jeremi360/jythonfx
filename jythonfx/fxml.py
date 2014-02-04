@@ -2,13 +2,14 @@
 import fix
 fix.getJavaFX()
 from javafx.fxml import FXMLLoader as FxmlL
+from java.net import URL
 
 class FXMLLoader(object):
     def __init__(self, fxmlfile):
         print fxmlfile
         #fxml = FxmlL(self.getClass().getResource(fxmlfile))
         #fxml = FxmlL(self.getClass().getResource(fxmlfile))
-        fxml = FxmlL(fxmlfile)
+        fxml = FxmlL(URL(fxmlfile))
         fxml.setController(self)
         fxml.setLocation(".")
 
