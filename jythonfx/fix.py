@@ -4,8 +4,9 @@ from javax.swing import JOptionPane as jop
 from java.net import URL as url
 from java.awt import Desktop as desk
 
-import sys as sys
-import os as os
+import sys
+import os
+import platform
 
 def checkJavaVer():
     ver = jsys.getProperty("java.version")
@@ -16,10 +17,18 @@ def checkJavaVer():
 
     def mess():
         mess = unicode("""Too old java version pleas upgrade to  7u11 or higher \n
-                Zbyt stara wersja Java proszę zaktualizować do 7u11""")
+                Zbyt stara wersja Java proszę zaktualizować do 7u11 lub wyższej""")
         jop.showMessageDialog(None, mess)
+
         try:
-            desk.getDesktop().browse(url("http://www.java.com").toURI());
+            if platform.dist() == ('debian', 'wheezy/sid', ''):#for ubuntu
+                getjava = "http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html"
+
+            else:
+                getjava = "http://www.java.com"
+
+            desk.getDesktop().browse(url(getjava).toURI());
+
         except:
             pass
 
