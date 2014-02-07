@@ -25,7 +25,7 @@ class FXMLLoader(object):
 
                 try:
                     if c.getChildren() != []:
-                        self.setIds(c, c.getId() + "_")
+                        self.setIds(c, c.getId())
                 except:
                     pass
 
