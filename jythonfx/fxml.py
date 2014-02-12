@@ -35,7 +35,7 @@ class FXMLLoader(object):
 
         except:
             try:
-                for c in children.getChildrenUnmodifiable():
+                for c in children.getItems():
                     self.inSetIds(c, prefix)
 
             except:
