@@ -12,7 +12,7 @@ Simple tricks to make easy to develop apps using Jython + JavaFX.
 
 **required:**
 - [Jython](http://www.jython.org/downloads.html) 2.5.x or higher
-- [Java](http://www.java.com) 7u11 or higher
+- [Java](http://www.java.com) 7u11 or higher (8 not supported yet - to buggy for now)
 
 **How install:**
 
