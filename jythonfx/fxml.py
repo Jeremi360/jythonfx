@@ -1,6 +1,5 @@
 # -*- coding: utf-8 *-*
 import fix
-from test.test_isinstance import Child
 fix.getJavaFX()
 from javafx.fxml import FXMLLoader as FxmlL
 from java.io import File
@@ -14,26 +13,24 @@ class FXMLLoader(object):
 
         self.body = fxml.load()
         self.getChildren().add(self.body)
-        self.setIds(self.body)
+        self.setIds(self.body, "getChildren()")
 
-    def setIds(self, children, prefix = ""):
-        try:
-            for c in children.getChildren():
+
+    def setIds(self, children, way, prefix = ""):
+        for c in getattr(children, way):
+            try:
                 if c.getId != "":
                     setattr(self, prefix + c.getId(), c)
                     print "self." + prefix + c.getId()
 
-                    try:
-                        if c.getChildren() != []:
-                            self.setIds(c, c.getId())
+                try:
+                    if getattr(c, way) != []:
+                        self.setIds(c, c.getId())
+                except:
+                    pass
 
-                    except:
-                        pass
-
-
-        except:
-            pass
-
+            except:
+                pass
 
 
 
