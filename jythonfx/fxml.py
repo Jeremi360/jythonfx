@@ -32,4 +32,20 @@ class FXMLLoader(object):
             except:
                 pass
 
+    def setTabsIds(self, children, prefix = ""):
+        for c in children.getTabs():
+            try:
+                if c.getId != "":
+                    setattr(self, prefix + c.getId(), c)
+                    print "self." + prefix + c.getId()
+
+                try:
+                    if c.getChildren() != []:
+                        self.setIds(c, c.getId())
+                except:
+                    pass
+
+            except:
+                pass
+
 
