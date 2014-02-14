@@ -13,24 +13,23 @@ class FXMLLoader(object):
 
         self.body = fxml.load()
         self.getChildren().add(self.body)
-        self.setIds(self.body, "getChildren()")
+        self.setIds(self.body)
 
 
-    def setIds(self, children, way, prefix = ""):
-        for c in getattr(children, way):
+    def setIds(self, children, prefix = ""):
+        for c in children.getChildren():
             try:
                 if c.getId != "":
                     setattr(self, prefix + c.getId(), c)
                     print "self." + prefix + c.getId()
 
                 try:
-                    if getattr(c, way) != []:
+                    if c.getChildren() != []:
                         self.setIds(c, c.getId())
                 except:
                     pass
 
             except:
                 pass
-
 
 
