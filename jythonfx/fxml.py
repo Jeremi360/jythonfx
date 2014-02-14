@@ -6,13 +6,13 @@ from java.io import File
 
 
 class FXMLLoader(object):
-    def __init__(self, fxmlfile):
+    def __init__(self, fxmlfile, prefix = ""):
         print fxmlfile
         fxml = FxmlL(File(fxmlfile).toURL())
         fxml.setController(self)
 
         self.body = fxml.load()
-        self.getChildren().add(self.body)
+        self.getChildren().add(self.body, prefix)
         self.setIds(self.body)
 
 
