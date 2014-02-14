@@ -12,8 +12,8 @@ class FXMLLoader(object):
         fxml.setController(self)
 
         self.body = fxml.load()
-        self.getChildren().add(self.body, prefix)
-        self.setIds(self.body)
+        self.getChildren().add(self.body)
+        self.setIds(self.body, prefix)
 
 
     def setIds(self, children, prefix = ""):
