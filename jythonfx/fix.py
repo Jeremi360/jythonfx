@@ -44,7 +44,7 @@ def checkJavaVer():
             mess()
 
     elif ver[0] >= 1.8:
-        message = unicode("To wersja beta - moga występowac bledy.\n" +
+        message = unicode("To wersja beta - moga wystepowac bledy.\n" +
                        "This is beta version - may be have some bugs.")
 
         jop.showMessageDialog(None, message)
