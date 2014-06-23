@@ -49,6 +49,11 @@ def checkJavaVer():
 
         jop.showMessageDialog(None, message)
 
+    else:
+        print "AAAAAAAAAAAAAA!!! Errors!!!"
+        sys.exit()
+
+
 
 def getJavaFX():
     checkJavaVer()
