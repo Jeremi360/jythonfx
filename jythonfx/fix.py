@@ -47,8 +47,9 @@ def checkJavaVer():
         message = unicode("To wersja beta - moga wystepowac bledy.\n" +
                        "This is beta version - may be have some bugs.")
 
-        jop.showMessageDialog(None, message)
-        continue
+    jop.showMessageDialog(None, message)
+    jop.
+
 
 def getJavaFX():
     checkJavaVer()
