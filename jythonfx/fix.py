@@ -48,7 +48,7 @@ def checkJavaVer():
                        "This is beta version - may be have some bugs.")
 
         jop.showMessageDialog(None, message)
-
+        continue
 
 def getJavaFX():
     checkJavaVer()
