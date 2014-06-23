@@ -43,16 +43,11 @@ def checkJavaVer():
         if ver[1] <= 0.11:
             mess()
 
-    elif ver[0] >= 1.8:
+    else:
         message = unicode("To wersja beta - moga wystepowac bledy.\n" +
                        "This is beta version - may be have some bugs.")
 
         jop.showMessageDialog(None, message)
-
-    else:
-        print "AAAAAAAAAAAAAA!!! Errors!!!"
-        sys.exit()
-
 
 
 def getJavaFX():
