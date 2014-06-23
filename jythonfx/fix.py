@@ -42,14 +42,14 @@ def checkJavaVer():
     elif ver[0] == 1.7:
         if ver[1] <= 0.11:
             mess()
-            break
+
 
     elif ver[0] >= 1.8:
         message = unicode("To wersja beta - moga wystepowac bledy.\n" +
                        "This is beta version - may be have some bugs.")
 
         jop.showMessageDialog(None, message)
-        break
+
 
 
 def getJavaFX():
