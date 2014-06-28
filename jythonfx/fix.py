@@ -57,5 +57,6 @@ def getJavaFX():
         message = unicode("To wersja beta - mogą wystąpować błedy.\n" +
                                     "This is beta version - may be have some bugs.")
         jop.showMessageDialog(None, message)
+        pass
 
 
