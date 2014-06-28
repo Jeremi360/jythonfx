@@ -1,7 +1,5 @@
 JythonFX
 ========
-**Warning: This project is abandoned!!!**
-**Please somone Fork this and continue.**
 
 **PL:**
 Info na temat instalacji i tutorial po polsku zajdziecie [tu](http://retrofunhd.esy.es/?p=56)

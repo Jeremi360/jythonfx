@@ -28,11 +28,14 @@ def mess():
     sys.exit()
 
 def checkJavaVer():
+    home = jsys.getProperty("java.home")
     ver = jsys.getProperty("java.version")
     ver = ver.split(".")
     ver[-1] = float(ver[-1].replace("_", "."))
     ver[0] = float(str(ver[0]) + "." + str(ver[1]))
     ver.pop(1)
+
+    jfxrt = ""
 
     print  ver
 
@@ -42,21 +45,20 @@ def checkJavaVer():
     elif ver[0] == 1.7:
         if ver[1] <= 0.11:
             mess()
-
+            jfxrt = os.path.join(home, "lib", "jfxrt.jar")
     else:
         message = unicode("To wersja beta - moga wystepowac bledy.\n" +
                        "This is beta version - may be have some bugs.")
 
     jop.showMessageDialog(None, message)
-    jop.
 
 
 def getJavaFX():
     checkJavaVer()
-    home = jsys.getProperty("java.home")
+
 
     try:
-        sys.path.insert(0, os.path.join(home, "lib", "jfxrt.jar"))
+        sys.path.insert(0, )
 
     except:
         pass
