@@ -4,7 +4,7 @@ import sys
 import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 from jythonfx import fix
-fix.getJavaFX()
+fix.getJavaFX() #need only for older than Java 8 version
 from jythonfx.application import Application
 from javafx.scene import control, layout, Scene
 from jythonfx.event import EventHandler as EH
