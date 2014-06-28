@@ -51,9 +51,10 @@ def getJavaFX():
             except:
                 message = unicode("Nie można odnaleść biblioteki JavaFX(jfxrt.jar).\n" + "Unable to find JavaFX lib (jfxrt.jar).")
                 jop.showMessageDialog(None, message)
+                sys.exit()
 
     else:
-        message = unicode("To wersja beta - moga wystepowac bledy.\n" +
+        message = unicode("To wersja beta - mogą wystąpować błedy.\n" +
                        "This is beta version - may be have some bugs.")
         jop.showMessageDialog(None, message)
 
