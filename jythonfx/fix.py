@@ -27,15 +27,12 @@ def mess():
 
     sys.exit()
 
-def checkJavaVer():
-    home = jsys.getProperty("java.home")
+def getJavaFX():
     ver = jsys.getProperty("java.version")
     ver = ver.split(".")
     ver[-1] = float(ver[-1].replace("_", "."))
     ver[0] = float(str(ver[0]) + "." + str(ver[1]))
     ver.pop(1)
-
-    jfxrt = ""
 
     print  ver
 
@@ -45,20 +42,19 @@ def checkJavaVer():
     elif ver[0] == 1.7:
         if ver[1] <= 0.11:
             mess()
-            jfxrt = os.path.join(home, "lib", "jfxrt.jar")
+            home = jsys.getProperty("java.home")
+
+            try:
+                jfxrt = os.path.join(home, "lib", "jfxrt.jar")
+                sys.path.insert(0, jfxrt)
+
+            except:
+                message = unicode("Nie można odnaleść biblioteki JavaFX(jfxrt.jar).\n" + "Unable to find JavaFX lib (jfxrt.jar).")
+                jop.showMessageDialog(None, message)
+
     else:
         message = unicode("To wersja beta - moga wystepowac bledy.\n" +
                        "This is beta version - may be have some bugs.")
-
         jop.showMessageDialog(None, message)
-        jfxrt = os.path.join(home, "lib", "jfxrt.jar")
 
 
-def getJavaFX():
-     jfxrt = checkJavaVer()
-
-    try:
-        sys.path.insert(0, jfxrt)
-
-    except:
-        pass
