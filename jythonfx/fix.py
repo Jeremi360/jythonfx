@@ -9,12 +9,13 @@ import os
 import platform
 
 def mess():
-    message = unicode("Too old java version pleas upgrade to  7u11 or higher.\n" +
-                       "Zbyt stara wersja Java proszę zaktualizować do 7u11 lub wyższej.")
+    print "unicode() - nie chce dzialc/n" +"unicode() - don't work :("
+    part01 = "Too old java version pleas upgrade to  7u11 or higher.\n"
+    message =  part01 + "Zbyt stara wersja Java prosze zaktualizowac do 7u11 lub wyzszej."
     jop.showMessageDialog(None, message)
 
     try:
-        if platform.dist() == ('debian', 'wheezy/sid', ''):#for ubuntu
+        if platform.dist() == ('debian', 'wheezy/sid'):#for ubuntu
             getjava = "http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html"
 
         else:
@@ -49,7 +50,8 @@ def getJavaFX():
                 sys.path.insert(0, jfxrt)
 
             except:
-                message = unicode("Nie można odnaleść biblioteki JavaFX(jfxrt.jar).\n" + "Unable to find JavaFX lib (jfxrt.jar).")
+                part01 = "Nie można odnalesc biblioteki JavaFX(jfxrt.jar).\n"
+                message = part01 + "Unable to find JavaFX lib (jfxrt.jar)."
                 jop.showMessageDialog(None, message)
                 sys.exit()
 
