@@ -50,15 +50,15 @@ def checkJavaVer():
         message = unicode("To wersja beta - moga wystepowac bledy.\n" +
                        "This is beta version - may be have some bugs.")
 
-    jop.showMessageDialog(None, message)
+        jop.showMessageDialog(None, message)
+        jfxrt = os.path.join(home, "lib", "jfxrt.jar")
 
 
 def getJavaFX():
-    checkJavaVer()
-
+     jfxrt = checkJavaVer()
 
     try:
-        sys.path.insert(0, )
+        sys.path.insert(0, jfxrt)
 
     except:
         pass
