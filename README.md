@@ -5,14 +5,21 @@ JythonFX
 Info na temat instalacji i tutorial po polsku zajdziecie [tu](http://retrofunhd.esy.es/?p=56)
 
 **ENG:**
-
 Simple tricks to make easy to develop apps using Jython + JavaFX.
 
-**files included:**
+**Samples:**
+- Simple onebutton app (HelloJyFx.py)
+- Simple FXML app(FXMLSample.py, FXMLSample.fxml)
+
+**Done:**
+- Simple App class
+-
+
+**Files included:**
 - **samples** - samples with commentary
 - **Templates** - file temples for Eclipse IDE
 
-**required:**
+**Required:**
 - [Jython](http://www.jython.org/downloads.html) 2.5.x or higher
 - [Java](http://www.java.com) 7u11 or higher (8 not supported yet - to buggy for now)
 

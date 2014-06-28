@@ -4,7 +4,6 @@ fix.getJavaFX()
 from javafx.application import Application as Appfx
 
 
-
 class Application(Appfx):
     def __init__(self):
         #this override method self.launch using self.__launch__
