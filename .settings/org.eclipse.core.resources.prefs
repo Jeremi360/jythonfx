@@ -1,5 +1,7 @@
 eclipse.preferences.version=1
 encoding//jythonfx/application.py=utf-8
+encoding//jythonfx/event.py=utf-8
 encoding//jythonfx/fix.py=utf-8
+encoding//jythonfx/fxml.py=utf-8
 encoding//samples/FXMLSample.py=utf-8
 encoding//samples/HelloJyFx.py=utf-8
