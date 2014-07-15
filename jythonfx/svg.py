@@ -18,7 +18,7 @@ class SVGLoader(Group):
         ids = [path.getAttribute('id') for path
                         in self.doc.getElementsByTagName('path')]
 
-        for i is in leg(ids):
+        for i in leg(ids):
             dis[i].replace(" ", "_")
             print dis[i]
 
