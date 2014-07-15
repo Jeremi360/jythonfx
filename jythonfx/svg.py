@@ -5,16 +5,15 @@ import os
 
 class SVGLoader(Group):
     def __init__(self, svg_file):
-        doc = minidom.parse(svg_file)  # parseString also exists
-        self.doc = doc.getElementsByTagName("svg")
-        doc.unlink()
+        self.doc = minidom.parse(svg_file)  # parseString also exists)
         print self.doc
         self._set_layers()
+        self.doc.unlink()
 
 
     def _set_layers(self):
-        layers = [self.doc.getAttribute('svg') for layer
-                    in self.doc.getElementsByTagName('g')]
+        layers = [self.doc.getElementsByTagName('svg') for layer
+                    in self.doc.getAttribute('g')]
         print layers
         ids = [layer.getAttribute('g') for layer
                         in layer.getElementsByTagName('id')]
