@@ -19,8 +19,8 @@ class SVGLoader(Group):
                         in self.doc.getElementsByTagName('path')]
 
         for i in leg(ids):
-            dis[i].replace(" ", "_")
-            print dis[i]
+            ids[i].replace(" ", "_")
+            print ids[i]
 
         for d, p in ids, paths:
             Path = shape.SVGPath(p)
