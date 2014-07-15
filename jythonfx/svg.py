@@ -15,7 +15,8 @@ class SVGLoader(Group):
         ids = [path.getAttribute('id') for path
                         in self.doc.getElementsByTagName('path')]
 
-        return {ids:paths}
+        for d, p in ids, paths:
+            print d, p
 
 
 
