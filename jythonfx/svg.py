@@ -9,8 +9,8 @@ class SVGLoader(Group):
         self._set_paths()
         self.doc.unlink()
 
-        #    def _set_layers(self):
-        #layers =
+    def _set_layers(self, prefix):
+        layers =
 
     def _set_paths(self, prefix = ""):
         paths = [path.getAttribute('d') for path
@@ -19,8 +19,7 @@ class SVGLoader(Group):
                         in self.doc.getElementsByTagName('path')]
 
         for i in range(len(ids)):
-            ids[i].replace(" ", "_")
-            print ids[i]
+            ids[i] = ids[i].replace(" ", "_")
 
         for d, p in ids, paths:
             Path = shape.SVGPath()
