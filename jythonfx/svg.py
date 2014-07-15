@@ -6,23 +6,20 @@ import os
 class SVGLoader(Group):
     def __init__(self, svg_file):
         self.doc = minidom.parse(svg_file)  # parseString also exists
-        self._set_paths()
+        self._set_layers()
         self.doc.unlink()
 
-    def _set_layers(self, prefix):
-        layers =  [path.getAttribute('g') for path
-                        in self.doc.getElementsByTagName()]
-        ids = [path.getAttribute('id') for path
-                        in self.doc.getElementsByTagName('path')]
+    def _set_layers(self, prefix = ""):
+        layers = self.doc.getElementsByTagName('g')
+        print layers
+        ids = [layer.getAttribute('g') for layer
+                        in self.doc.getElementsByTagName('id')]
 
-    def _set_paths(self, prefix = ""):
+    def _set_paths(self, layer, prefix = ""):
         paths = [path.getAttribute('d') for path
                         in self.doc.getElementsByTagName('path')]
         ids = [path.getAttribute('id') for path
                         in self.doc.getElementsByTagName('path')]
-
-        for i in range(len(ids)):
-            ids[i] = ids[i].replace(" ", "_")
 
         for d, p in ids, paths:
             Path = shape.SVGPath()
