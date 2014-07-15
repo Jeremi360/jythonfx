@@ -24,6 +24,7 @@ class SVGLoader(Group):
 
         for d, p in ids, paths:
             Path = shape.SVGPath()
+            Path.setContent(p)
             setattr(self,  prefix + d, Path)
             self.getChildren().add(Path)
             print "self." + prefix + d
