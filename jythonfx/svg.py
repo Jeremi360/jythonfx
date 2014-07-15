@@ -9,23 +9,31 @@ class SVGLoader(Group):
         self._set_layers()
         self.doc.unlink()
 
-    def _set_layers(self, prefix = ""):
+    def _set_layers(self):
         layers = self.doc.getElementsByTagName('g')
         print layers
         ids = [layer.getAttribute('g') for layer
                         in self.doc.getElementsByTagName('id')]
 
-    def _set_paths(self, layer, prefix = ""):
+        for d, l in ids, layers:
+            Layer = Group()
+            self._set_paths(Layer, l, d)
+            self.getChildren().add(Layer)
+            setattr(self, id, Layer)
+            print "self." + d
+
+
+    def _set_paths(self, fxlayer, svglayer, prefix = ""):
         paths = [path.getAttribute('d') for path
-                        in self.doc.getElementsByTagName('path')]
+                        in svglayer.getElementsByTagName('path')]
         ids = [path.getAttribute('id') for path
-                        in self.doc.getElementsByTagName('path')]
+                        in svglayer.getElementsByTagName('path')]
 
         for d, p in ids, paths:
             Path = shape.SVGPath()
             Path.setContent(p)
             setattr(self,  prefix + d, Path)
-            self.getChildren().add(Path)
+            fxlayer.getChildren().add(Path)
             print "self." + prefix + d
 
 
