@@ -13,10 +13,11 @@ class SVGLoader(Group):
 
 
     def _set_layers(self):
-        layers = self.doc.getElementsByTagName('g')
+        layers = [layer.getAttribute('svg') for layer
+                    in self.doc.getElementsByTagName('g')]
         print layers
         ids = [layer.getAttribute('g') for layer
-                        in self.doc.getElementsByTagName('id')]
+                        in layer.getElementsByTagName('id')]
 
         for d, l in ids, layers:
             Layer = Group()
