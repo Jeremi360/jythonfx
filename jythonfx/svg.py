@@ -7,7 +7,7 @@ class SVGLoader(Group):
         self.doc = minidom.parse(svg_file)  # parseString also exists
         test = self._set_paths()
         self.doc.unlink()
-        print test
+        #print test
 
     def _set_paths(self):
         paths = [path.getAttribute('d') for path
