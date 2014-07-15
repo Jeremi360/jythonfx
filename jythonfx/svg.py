@@ -9,8 +9,8 @@ class SVGLoader(Group):
         self._set_paths()
         self.doc.unlink()
 
-    def _set_layers(self):
-        layers =
+        #    def _set_layers(self):
+        #layers =
 
     def _set_paths(self, prefix = ""):
         paths = [path.getAttribute('d') for path
