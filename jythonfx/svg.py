@@ -10,7 +10,8 @@ class SVGLoader(Group):
         ids = [path.getAttribute('id') for path
                         in doc.getElementsByTagName('path')]
         doc.unlink()
-        print paths, ids
+        print paths
+        print ids
 
 svgF =  os.path.join('..', 'samples', 'Test.svg')
 svgO = SVGLoader(svgF)
