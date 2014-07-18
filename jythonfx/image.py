@@ -3,9 +3,10 @@ import fix
 fix.getJavaFX()
 
 from java.io import File
-from javafx.scene.image import ImageView as IV
+from javafx.scene.image import Image, ImageView as IV
 
-class ImageView(IV):
+class Image(IV):
     def __init__(self, path_to_img):
         f = File(path_to_img).toURI().toString()
-        super(ImageView, self).__init__(f)
+        img = Image(f)
+        super(Image, self).__init__(img)
