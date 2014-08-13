@@ -8,3 +8,5 @@
 .project
 .sparkleshare
 
+# .gitignore
+.gitignore
