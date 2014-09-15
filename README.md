@@ -15,7 +15,7 @@ Simple tricks to make easy to develop apps using Jython + JavaFX.
 - Application class(application.Application)
 - EventHandler class(event.EventHandler)
 - FXML Files Loader(fxml.FXMLLoader) with support for Tabs
-- Tool to fix and abort to run app on older than 7 Java(fix.getJavaFX)
+- Tool to fixuser jython path and abort to run app on older than 7 Java(fix.getJavaFX)
 - Temples
 
 **TODO:**
