@@ -1,0 +1,29 @@
+{
+  "mainFile": "", 
+  "use-tabs": false, 
+  "venv": "", 
+  "relatedProjects": [], 
+  "name": "jythonfx", 
+  "license": "GNU General Public License v3", 
+  "url": "https://github.com/jeremi360/jythonfx", 
+  "pythonPath": "", 
+  "preExecScript": "", 
+  "additional_builtins": [], 
+  "programParams": "", 
+  "indentation": 4, 
+  "PYTHONPATH": "", 
+  "supported-extensions": [
+    ".py", 
+    ".html", 
+    ".jpg", 
+    ".png", 
+    ".ui", 
+    ".css", 
+    ".json", 
+    ".js", 
+    ".ini"
+  ], 
+  "project-type": "JythonFX", 
+  "postExecScript": "", 
+  "description": "Simple Jython + JavaFX"
+}
