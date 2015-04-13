@@ -1,0 +1,12 @@
+# jython staff
+*.pyc
+*.class
+
+# Eclipse IDE
+.settings
+.pydevproject
+.project
+.sparkleshare
+
+# .gitignore
+.gitignore
