@@ -24,7 +24,6 @@ Simple tricks to make easy to develop apps using Jython + JavaFX.
 - Recreate some Grabbo widgets
 - Class & Sample for make Animation easy
 
-
 **Files included:**
 - **samples** - samples with commentary
 - **Templates** - file temples for Eclipse IDE
