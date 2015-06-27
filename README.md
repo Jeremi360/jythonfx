@@ -20,9 +20,10 @@ Simple tricks to make easy to develop apps using Jython + JavaFX.
 
 **TODO:**
 - Sample for FXML with Tabs
-- Class & Sample for make Animation easy
 - Recreate some of Gtk 3.12 widgets
 - Recreate some Grabbo widgets
+- Class & Sample for make Animation easy
+
 
 **Files included:**
 - **samples** - samples with commentary
