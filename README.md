@@ -20,6 +20,8 @@ Simple tricks to make easy to develop apps using Jython + JavaFX.
 
 **TODO:**
 - Sample for FXML with Tabs
+- Recreate some of Gtk 3.12 widgets
+- Recreate some Grabbo widgets
 - Class & Sample for make Animation easy
 
 **Files included:**
@@ -32,7 +34,7 @@ Simple tricks to make easy to develop apps using Jython + JavaFX.
 
 **How install:**
 
-1. Add *java_home/jre/lib/jfxrt.jar* to your jython path
+1. Add *java_home/jre/lib/jfxrt.jar* to your jython path(only Java 7u*)
 
 1. Copy *jythonfx* directory to *jython_directory/Lib/site-packages*
 
